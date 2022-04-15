@@ -1,4 +1,4 @@
-using Repo;
+﻿using Business;
 using GlobalDev.entitiy;
 using System.Web.Mvc;
 using Unity;
@@ -10,12 +10,12 @@ namespace GlobalDev
     {
         public static void RegisterComponents()
         {
-			var container = new UnityContainer();
+            var container = new UnityContainer();
 
             // register all your components with the container here
             // it is NOT necessary to register your controllers
 
-          container.RegisterType<IRepository<Students>, Repository<Students>>();
+            container.RegisterType<Business<Students>>();
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using GlobalDev.entitiy;
 using System.Web.Mvc;
-using Repo;
+using Business;
 using System.IO;
 using System.Data;
 
@@ -12,14 +12,14 @@ namespace GlobalDev.Controllers
 {
     public class StudentController : Controller
     {
-        public IRepository<Students> Repo;
-        public StudentController(IRepository<Students> repo)
+        private readonly Business<Students> Business;
+        public StudentController(Business<Students> business)
         {
-            Repo = repo;
+            Business = business;
         }
         public ActionResult Index()
         {
-            return View(Repo.GetAll());
+            return View(Business.GetAll());
         }
         public ActionResult Create()
         {
@@ -28,14 +28,16 @@ namespace GlobalDev.Controllers
         [HttpPost]
         public ActionResult Create(Students Students)
         {
+            //upload img
             string fileName = Path.GetFileNameWithoutExtension(Students.ImageFile.FileName);
             string extension = Path.GetExtension(Students.ImageFile.FileName);
             fileName = fileName+ DateTime.Now.ToString("yymmssffff") + extension;   
             Students.Image = "../Photos/" + fileName;
             fileName = Path.Combine(Server.MapPath("../Photos/"),fileName);
             Students.ImageFile.SaveAs(fileName);
-            Repo.Add(Students);
-            Repo.Save();
+            // add it
+            Business.Add(Students);
+            Business.Save();
             return RedirectToAction("Index","Student");
         }
 

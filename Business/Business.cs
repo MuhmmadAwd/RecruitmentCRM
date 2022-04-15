@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using GlobalDev.entitiy;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GlobalDev.entitiy;
 
-namespace Repo
+
+namespace Business
 {
-    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
+    public class Business<TEntity> where TEntity : class
     {
         private readonly GDevContext Context;
-        public Repository(GDevContext context)
+        public Business(GDevContext context)
         {
             Context = context;
         }
@@ -29,8 +24,5 @@ namespace Repo
         {
             Context.Set<TEntity>().Add(entity);
         }
-
-
     }
-
 }
