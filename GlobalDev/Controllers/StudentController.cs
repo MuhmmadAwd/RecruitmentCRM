@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using GlobalDev.entitiy;
+using GlobalDev.Dal;
 using System.Web.Mvc;
-using Business;
+using GlobalDev.Bal;
+using GlobalDev.Dto;
 using System.IO;
 using System.Data;
 
@@ -12,8 +13,8 @@ namespace GlobalDev.Controllers
 {
     public class StudentController : Controller
     {
-        private readonly Business<Students> Business;
-        public StudentController(Business<Students> business)
+        private readonly Business Business;
+        public StudentController(Business business)
         {
             Business = business;
         }
@@ -26,17 +27,17 @@ namespace GlobalDev.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create(Students Students)
+        public ActionResult Create(StudentDto studentDto)
         {
             //upload img
-            string fileName = Path.GetFileNameWithoutExtension(Students.ImageFile.FileName);
-            string extension = Path.GetExtension(Students.ImageFile.FileName);
-            fileName = fileName+ DateTime.Now.ToString("yymmssffff") + extension;   
-            Students.Image = "../Photos/" + fileName;
+            string fileName = Path.GetFileNameWithoutExtension(studentDto.ImageFile.FileName);
+            string extension = Path.GetExtension(studentDto.ImageFile.FileName);
+            fileName = fileName+ DateTime.Now.ToString("yymmssffff") + extension;
+            studentDto.Image = "../Photos/" + fileName;
             fileName = Path.Combine(Server.MapPath("../Photos/"),fileName);
-            Students.ImageFile.SaveAs(fileName);
+            studentDto.ImageFile.SaveAs(fileName);
             // add it
-            Business.Add(Students);
+            Business.Add(studentDto);
             Business.Save();
             return RedirectToAction("Index","Student");
         }

@@ -1,18 +1,20 @@
-﻿using GlobalDev.entitiy;
+﻿using AutoMapper;
+using GlobalDev.Dal;
+using GlobalDev.Dto;
 
 
-namespace Business
+namespace GlobalDev.Bal
 {
-    public class Business<TEntity> where TEntity : class
+    public class Business
     {
         private readonly GDevContext Context;
         public Business(GDevContext context)
         {
             Context = context;
         }
-        public IEnumerable<TEntity> GetAll()
+        public IEnumerable<Students> GetAll()
         {
-            return Context.Set<TEntity>().ToList();
+            return Context.Set<Students>().ToList();
         }
 
         public void Save()
@@ -20,9 +22,12 @@ namespace Business
             Context.SaveChanges();
         }
 
-        public void Add(TEntity entity)
+        public void Add(StudentDto studentDto)
         {
-            Context.Set<TEntity>().Add(entity);
+            Mappers mappers = new Mappers();
+          var Student =  mappers.Map<StudentDto,Students>(studentDto);
+
+            Context.Set<Students>().Add(Student);
         }
     }
 }

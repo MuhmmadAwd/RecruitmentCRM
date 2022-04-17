@@ -6,10 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using AutoMapper;
 
-namespace GlobalDev.Dal
+namespace GlobalDev.Dto
 {
-    public class Students
+
+    public class StudentDto
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -20,7 +22,7 @@ namespace GlobalDev.Dal
         public string Gender { get; set; }
         public string Email { get; set; }
         public string LinkedinAccount { get; set; }
-        public string Experience { get; set; } 
+        public string Experience { get; set; }
         public string SeniorityLevel { get; set; }
         public string StudySubject { get; set; }
         [Column(TypeName = "date")]
@@ -33,4 +35,5 @@ namespace GlobalDev.Dal
         public HttpPostedFileBase ImageFile { get; set; }
 
     }
+
 }

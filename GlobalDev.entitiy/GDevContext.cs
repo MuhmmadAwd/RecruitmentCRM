@@ -5,13 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GlobalDev.entitiy
+namespace GlobalDev.Dal
+
 {
     public class GDevContext : DbContext
     {
         public GDevContext() : base()
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<GDevContext, GlobalDev.entitiy.Migrations.Configuration>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<GDevContext, GlobalDev.Dal.Migrations.Configuration>());
         }
         public virtual DbSet<Students> Students { get; set; }
     }

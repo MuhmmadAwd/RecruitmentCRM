@@ -1,4 +1,4 @@
-﻿namespace GlobalDev.entitiy.Migrations
+﻿namespace GlobalDev.Dal.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

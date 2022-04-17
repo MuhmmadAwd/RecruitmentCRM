@@ -1,5 +1,5 @@
-﻿using Business;
-using GlobalDev.entitiy;
+﻿using GlobalDev.Dal;
+using GlobalDev.Bal;
 using System.Web.Mvc;
 using Unity;
 using Unity.Mvc5;
@@ -15,7 +15,7 @@ namespace GlobalDev
             // register all your components with the container here
             // it is NOT necessary to register your controllers
 
-            container.RegisterType<Business<Students>>();
+            container.RegisterType<Business>();
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
