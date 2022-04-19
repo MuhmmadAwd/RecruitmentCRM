@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "recruitmentCRM.Web", "recruitmentCRM.Web\recruitmentCRM.Web.csproj", "{34EEB0BD-0C4F-458E-BBDE-BCFC421D8227}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "recruitmentCRM.Dto", "recruitmentCRM.Dto\recruitmentCRM.Dto.csproj", "{578B24EB-5DC9-4680-9439-B1B0A9822769}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "recruitmentCRM.Bal", "recruitmentCRM.Bal\recruitmentCRM.Bal.csproj", "{717D06F6-F55E-43BC-8923-CB77C66BBBED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "recruitmentCRM.Dal", "recruitmentCRM.Dal\recruitmentCRM.Dal.csproj", "{67FDBD9B-253B-46F1-90C7-534A6F6122BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{9C487D54-7354-40B5-A0AA-783BEE345D7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{FAF8E7E0-04DA-425C-982B-1581F2B604FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framwork", "Framwork", "{3C536A65-076B-4640-83BB-5EBD999AEE7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34EEB0BD-0C4F-458E-BBDE-BCFC421D8227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34EEB0BD-0C4F-458E-BBDE-BCFC421D8227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34EEB0BD-0C4F-458E-BBDE-BCFC421D8227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34EEB0BD-0C4F-458E-BBDE-BCFC421D8227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{578B24EB-5DC9-4680-9439-B1B0A9822769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{578B24EB-5DC9-4680-9439-B1B0A9822769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{578B24EB-5DC9-4680-9439-B1B0A9822769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{578B24EB-5DC9-4680-9439-B1B0A9822769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{717D06F6-F55E-43BC-8923-CB77C66BBBED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{717D06F6-F55E-43BC-8923-CB77C66BBBED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{717D06F6-F55E-43BC-8923-CB77C66BBBED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{717D06F6-F55E-43BC-8923-CB77C66BBBED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67FDBD9B-253B-46F1-90C7-534A6F6122BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67FDBD9B-253B-46F1-90C7-534A6F6122BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67FDBD9B-253B-46F1-90C7-534A6F6122BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67FDBD9B-253B-46F1-90C7-534A6F6122BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{34EEB0BD-0C4F-458E-BBDE-BCFC421D8227} = {9C487D54-7354-40B5-A0AA-783BEE345D7E}
+		{578B24EB-5DC9-4680-9439-B1B0A9822769} = {FAF8E7E0-04DA-425C-982B-1581F2B604FB}
+		{717D06F6-F55E-43BC-8923-CB77C66BBBED} = {FAF8E7E0-04DA-425C-982B-1581F2B604FB}
+		{67FDBD9B-253B-46F1-90C7-534A6F6122BC} = {FAF8E7E0-04DA-425C-982B-1581F2B604FB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7010D063-69AB-4C54-9C04-DA4FFC0F5966}
+	EndGlobalSection
+EndGlobal
