@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "recruitmentCRM.Web", "recruitmentCRM.Web\recruitmentCRM.Web.csproj", "{34EEB0BD-0C4F-458E-BBDE-BCFC421D8227}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruitmentCRM.Web", "recruitmentCRM.Web\RecruitmentCRM.Web.csproj", "{34EEB0BD-0C4F-458E-BBDE-BCFC421D8227}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "recruitmentCRM.Dto", "recruitmentCRM.Dto\recruitmentCRM.Dto.csproj", "{578B24EB-5DC9-4680-9439-B1B0A9822769}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitmentCRM.Dto", "recruitmentCRM.Dto\RecruitmentCRM.Dto.csproj", "{578B24EB-5DC9-4680-9439-B1B0A9822769}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "recruitmentCRM.Bal", "recruitmentCRM.Bal\recruitmentCRM.Bal.csproj", "{717D06F6-F55E-43BC-8923-CB77C66BBBED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitmentCRM.Bal", "recruitmentCRM.Bal\RecruitmentCRM.Bal.csproj", "{717D06F6-F55E-43BC-8923-CB77C66BBBED}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "recruitmentCRM.Dal", "recruitmentCRM.Dal\recruitmentCRM.Dal.csproj", "{67FDBD9B-253B-46F1-90C7-534A6F6122BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecruitmentCRM.Dal", "recruitmentCRM.Dal\RecruitmentCRM.Dal.csproj", "{67FDBD9B-253B-46F1-90C7-534A6F6122BC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{9C487D54-7354-40B5-A0AA-783BEE345D7E}"
 EndProject
