@@ -7,39 +7,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace RecruitmentCRM.Dal
+namespace recruitmentCRM.Dal
 {
     public class Students
     {
         public int Id { get; set; }
-        public string FullName { get; set; }
+        public string FirstName { get; set; }
+        public string SecondName { get; set; }
+        public string ThirdName { get; set; }
+        public string LastName { get; set; }
         public int Age { get; set; }
         public string Gender { get; set; }
         public string Email { get; set; }
-        public string LinkedinAccountUrl { get; set; }
-        public string FacebookAccountUrl { get; set; }
+        public string LinkedinAccount { get; set; }
+        public string FacebookAccount { get; set; }
         public string OtherSites { get; set; }
         public int PhoneNumber { get; set; }
-        public string universityMajor { get; set; }
+        public string SeniorityLevel { get; set; }
+        public string StudySubject { get; set; }
         [Column(TypeName = "date")]
-        public DateTime ExperienceYears { get; set; }
+        public DateTime Experience { get; set; }
         [Column(TypeName = "date")]
         public DateTime GraduatDate { get; set; }
         [Column(TypeName = "date")]
         public DateTime ApplyDate { get; set; }
         public string Country { get; set; }
-        public string Document { get; set; }
+        public string Notes { get; set; }
+        public string Image { get; set; }
         [NotMapped]
-        public IEnumerable<HttpPostedFileBase> DocumentFile { get; set; }
-        [Column(TypeName = "date")]
-        public DateTime CreationDate { get; set; }
-        public long CreatedBy { get; set; }
-        [Column(TypeName = "date")]
-        public DateTime UpdateDate {get; set; }
-        public long UpdatedBy { get; set; }
-        public ICollection<Note> Notes { get; set; }
-        public ICollection<Domain> Domains { get; set; }
-
+        public HttpPostedFileBase ImageFile { get; set; }
 
     }
 

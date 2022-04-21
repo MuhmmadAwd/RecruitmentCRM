@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net4.8</TargetFramework>
@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\recruitmentCRM.Dal\RecruitmentCRM.Dal.csproj" />
+    <ProjectReference Include="..\recruitmentCRM.Dal\recruitmentCRM.Dal.csproj" />
   </ItemGroup>
 
   <ItemGroup>

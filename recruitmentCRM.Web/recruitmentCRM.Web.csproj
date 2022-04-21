@@ -171,25 +171,24 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Photos\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Views\Student\Index.cshtml" />
     <Content Include="Views\Student\Create.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\recruitmentCRM.Bal\RecruitmentCRM.Bal.csproj">
+    <ProjectReference Include="..\recruitmentCRM.Bal\recruitmentCRM.Bal.csproj">
       <Project>{717d06f6-f55e-43bc-8923-cb77c66bbbed}</Project>
-      <Name>RecruitmentCRM.Bal</Name>
+      <Name>recruitmentCRM.Bal</Name>
     </ProjectReference>
-    <ProjectReference Include="..\recruitmentCRM.Dal\RecruitmentCRM.Dal.csproj">
-      <Project>{67fdbd9b-253b-46f1-90c7-534a6f6122bc}</Project>
-      <Name>RecruitmentCRM.Dal</Name>
+    <ProjectReference Include="..\recruitmentCRM.Dal\recruitmentCRM.Dal.csproj">
+      <Project>{67FDBD9B-253B-46F1-90C7-534A6F6122BC}</Project>
+      <Name>recruitmentCRM.Dal</Name>
     </ProjectReference>
-    <ProjectReference Include="..\recruitmentCRM.Dto\RecruitmentCRM.Dto.csproj">
+    <ProjectReference Include="..\recruitmentCRM.Dto\recruitmentCRM.Dto.csproj">
       <Project>{578b24eb-5dc9-4680-9439-b1b0a9822769}</Project>
-      <Name>RecruitmentCRM.Dto</Name>
+      <Name>recruitmentCRM.Dto</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

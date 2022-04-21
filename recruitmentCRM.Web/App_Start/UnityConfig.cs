@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using RecruitmentCRM.Bal;
+using recruitmentCRM.Bal;
 using Unity;
 using Unity.Mvc5;
 
-namespace RecruitmentCRM.Web.App_Start
+namespace recruitmentCRM.Web.App_Start
 {
     public class UnityConfig
     {

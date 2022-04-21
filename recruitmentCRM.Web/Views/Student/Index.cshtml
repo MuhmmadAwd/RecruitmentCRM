@@ -1,4 +1,4 @@
-﻿@model IEnumerable<RecruitmentCRM.Dal.Students>
+﻿@model IEnumerable<recruitmentCRM.Dal.Students>
 
 @{
     ViewBag.Title = "Index";
@@ -13,7 +13,16 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.FullName)
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecondName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThirdName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Age)
@@ -25,10 +34,10 @@
             @Html.DisplayNameFor(model => model.Email)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LinkedinAccountUrl)
+            @Html.DisplayNameFor(model => model.LinkedinAccount)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FacebookAccountUrl)
+            @Html.DisplayNameFor(model => model.FacebookAccount)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.OtherSites)
@@ -37,10 +46,13 @@
             @Html.DisplayNameFor(model => model.PhoneNumber)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.universityMajor)
+            @Html.DisplayNameFor(model => model.SeniorityLevel)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ExperienceYears)
+            @Html.DisplayNameFor(model => model.StudySubject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Experience)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.GraduatDate)
@@ -52,19 +64,10 @@
             @Html.DisplayNameFor(model => model.Country)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Document)
+            @Html.DisplayNameFor(model => model.Notes)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CreationDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedBy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UpdateDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UpdatedBy)
+            @Html.DisplayNameFor(model => model.Image)
         </th>
         <th></th>
     </tr>
@@ -72,7 +75,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.FullName)
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SecondName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThirdName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Age)
@@ -84,10 +96,10 @@
             @Html.DisplayFor(modelItem => item.Email)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.LinkedinAccountUrl)
+            @Html.DisplayFor(modelItem => item.LinkedinAccount)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.FacebookAccountUrl)
+            @Html.DisplayFor(modelItem => item.FacebookAccount)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.OtherSites)
@@ -96,10 +108,13 @@
             @Html.DisplayFor(modelItem => item.PhoneNumber)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.universityMajor)
+            @Html.DisplayFor(modelItem => item.SeniorityLevel)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ExperienceYears)
+            @Html.DisplayFor(modelItem => item.StudySubject)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Experience)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.GraduatDate)
@@ -111,19 +126,10 @@
             @Html.DisplayFor(modelItem => item.Country)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Document)
+            @Html.DisplayFor(modelItem => item.Notes)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CreationDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedBy)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UpdateDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UpdatedBy)
+            @Html.DisplayFor(modelItem => item.Image)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

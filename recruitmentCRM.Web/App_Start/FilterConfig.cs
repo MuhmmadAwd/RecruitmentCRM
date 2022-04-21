@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace RecruitmentCRM.Web
+namespace recruitmentCRM.Web
 {
     public class FilterConfig
     {

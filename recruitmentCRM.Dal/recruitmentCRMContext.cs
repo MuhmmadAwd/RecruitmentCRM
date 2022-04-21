@@ -5,7 +5,7 @@ using System.Text;
 using System.Data.Entity;
 using System.Threading.Tasks;
 
-namespace RecruitmentCRM.Dal
+namespace recruitmentCRM.Dal
 {
     public class RecruitmentCRMContext : DbContext
     {

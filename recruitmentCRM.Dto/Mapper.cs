@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
-using RecruitmentCRM.Dal;
+using recruitmentCRM.Dal;
 
-namespace RecruitmentCRM.Dto
+namespace recruitmentCRM.Dto
 {
     public class Mappers
     {

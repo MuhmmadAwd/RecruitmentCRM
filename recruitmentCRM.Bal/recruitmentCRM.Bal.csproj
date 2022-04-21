@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RecruitmentCRM.Dal\RecruitmentCRM.Dal.csproj" />
-    <ProjectReference Include="..\RecruitmentCRM.Dto\RecruitmentCRM.Dto.csproj" />
+    <ProjectReference Include="..\recruitmentCRM.Dal\recruitmentCRM.Dal.csproj" />
+    <ProjectReference Include="..\recruitmentCRM.Dto\recruitmentCRM.Dto.csproj" />
   </ItemGroup>
 
 </Project>
