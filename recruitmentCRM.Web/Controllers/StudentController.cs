@@ -5,11 +5,11 @@ using System.Web;
 using System.Web.Mvc;
 using System.IO;
 using System.Data;
-using recruitmentCRM.Bal;
-using recruitmentCRM.Dto;
-using recruitmentCRM.Dal;
+using RecruitmentCRM.Bal;
+using RecruitmentCRM.Dto;
+using RecruitmentCRM.Dal;
 
-namespace recruitmentCRM.Web.Controllers
+namespace RecruitmentCRM.Web.Controllers
 {
     public class StudentController : Controller
     {
@@ -29,13 +29,18 @@ namespace recruitmentCRM.Web.Controllers
         [HttpPost]
         public ActionResult Create(StudentDto studentDto)
         {
-            //upload img
-            string fileName = Path.GetFileNameWithoutExtension(studentDto.ImageFile.FileName);
-            string extension = Path.GetExtension(studentDto.ImageFile.FileName);
-            fileName = fileName + DateTime.Now.ToString("yymmssffff") + extension;
-            studentDto.Image = "../Photos/" + fileName;
-            fileName = Path.Combine(Server.MapPath("../Photos/"), fileName);
-            studentDto.ImageFile.SaveAs(fileName);
+            foreach (var file in studentDto.DocumentFile)
+            {
+                if (studentDto.DocumentFile != null)
+                {
+                    var fileName = Path.GetFileName(file.FileName);
+                    studentDto.Document = "../Photos/" + fileName;
+                    var path = Path.Combine(Server.MapPath("../Photos/"), fileName);
+                    file.SaveAs(path);
+                }
+            }
+
+
             // add it
             StudentService.Add(studentDto);
             StudentService.Save();

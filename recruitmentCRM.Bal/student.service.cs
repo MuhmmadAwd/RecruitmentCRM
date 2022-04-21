@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
-using recruitmentCRM.Dal;
-using recruitmentCRM.Dto;
+using RecruitmentCRM.Dal;
+using RecruitmentCRM.Dto;
 
 
 
-namespace recruitmentCRM.Bal
+namespace RecruitmentCRM.Bal
 {
     public class StudentService
     {
@@ -30,6 +30,9 @@ namespace recruitmentCRM.Bal
 
         public void Add(StudentDto studentDto)
         {
+            studentDto.CreationDate = DateTime.Now;
+            studentDto.CreatedBy = 1;
+
             Mappers mappers = new Mappers();
             var Student = mappers.Map<StudentDto, Students>(studentDto);
 

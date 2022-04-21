@@ -1,4 +1,5 @@
-﻿using recruitmentCRM.Web.App_Start;
+﻿using RecruitmentCRM.Web;
+using RecruitmentCRM.Web.App_Start;
 using System;
 using System.Collections.Generic;
 using System.Linq;
